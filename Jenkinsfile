@@ -4,7 +4,7 @@ pipeline{
     environment{
         scannerHome = tool 'SonarQube Scanner'
         SONAR_TOKEN = '19cc89fddb20a0c36268c322fc9f44c24a5a295d'
-        DOCKER_IMAGE = "my-maven-app"
+        DOCKER_IMAGE = "maven-recent"
         DOCKER_HUB_CREDENTIALS = 'docker-hub-credentials' 
 
 
