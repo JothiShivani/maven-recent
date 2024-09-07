@@ -4,6 +4,8 @@ pipeline{
     environment{
         scannerHome = tool 'SonarQube Scanner'
         SONAR_TOKEN = '19cc89fddb20a0c36268c322fc9f44c24a5a295d'
+        DOCKER_IMAGE = "my-maven-app"
+        DOCKER_HUB_CREDENTIALS = 'docker-hub-credentials' 
 
 
         
@@ -49,6 +51,15 @@ pipeline{
                 -Dsonar.exclusion=**/*.java \
                 -Dsonar.java.binaries=target/classes"
 
+                }
+            }
+        }
+        
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    // Build the Docker image using the Dockerfile
+                    bat 'docker build -t %DOCKER_IMAGE% .'
                 }
             }
         }
