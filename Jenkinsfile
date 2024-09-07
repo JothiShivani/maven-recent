@@ -63,5 +63,19 @@ pipeline{
                 }
             }
         }
+
+        stage('Push Docker Image') {
+            steps {
+                script {
+                    // Push the Docker image to Docker Hub
+                    docker.withRegistry('https://index.docker.io/v1/', DOCKER_HUB_CREDENTIALS) {
+                        bat 'docker tag %DOCKER_IMAGE% jothishivani/%DOCKER_IMAGE%'
+                        bat 'docker push jothishivani/%DOCKER_IMAGE%'
+                    }
+                }
+            }
+        }
+
+        
     }
 }
