@@ -8,5 +8,12 @@ pipeline{
                 git 'https://github.com/JothiShivani/maven-recent.git'
             }
         }
+
+        stage('Build Maven Project') {
+            steps {
+                // Run the Maven build
+                bat 'mvn clean install'
+            }
+        }
     }
 }
