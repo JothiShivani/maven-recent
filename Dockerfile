@@ -2,7 +2,7 @@ FROM maven:latest AS builder
 WORKDIR /temp
 COPY pom.xml .
 COPY src ./src
-RUN mvn clean install
+RUN mvn install
 
 FROM openjdk:21-slim
 EXPOSE 8081
