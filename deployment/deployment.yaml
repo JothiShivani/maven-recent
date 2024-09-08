@@ -13,7 +13,7 @@ spec:
         app: springboot-deployment
     spec:
       containers:
-        - name: springconatiner
-          image: 211125415675.dkr.ecr.us-east-1.amazonaws.com/springapp1-cluster-repo:latest
+        - name: maven-joe-recent
+          image: jothishivani/maven-recent:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 8084
