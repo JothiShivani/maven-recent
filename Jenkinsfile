@@ -6,6 +6,10 @@ pipeline{
         SONAR_TOKEN = '19cc89fddb20a0c36268c322fc9f44c24a5a295d'
         DOCKER_IMAGE = "maven-recent"
         DOCKER_HUB_CREDENTIALS = 'docker-hub-credentials' 
+        AWS_ACCESS_KEY_ID     = credentials('AWS Access Key ID')
+        AWS_SECRET_ACCESS_KEY = credentials('AWS Secret Access Key')
+        
+
 
 
         
