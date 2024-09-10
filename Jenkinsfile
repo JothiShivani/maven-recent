@@ -80,14 +80,14 @@ pipeline{
         //     }
         // }
 
-        stage('Terraform'){
-            steps{
-                bat 'C:\\Users\\mathanj\\terraform\\terraform init'
-                bat 'C:\\Users\\mathanj\\terraform\\terraform plan'
-                bat 'C:\\Users\\mathanj\\terraform\\terraform apply -auto-approve'
+        // stage('Terraform'){
+        //     steps{
+        //         bat 'C:\\Users\\mathanj\\terraform\\terraform init'
+        //         bat 'C:\\Users\\mathanj\\terraform\\terraform plan'
+        //         bat 'C:\\Users\\mathanj\\terraform\\terraform apply -auto-approve'
 
-            }
-        }
+        //     }
+        // }
 
         
     }
